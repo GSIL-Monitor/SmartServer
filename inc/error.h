@@ -1,0 +1,7 @@
+#pragma once
+
+
+#define INVALID_ARGUMENT_EXCEPTION			-100
+#define OUT_OF_RANGE_EXCEPTION				-101
+#define BAD_ALLOC_EXCEPTION					-102
+#define LENGTH_ERROR_EXCEPTION				-103
