@@ -20,12 +20,12 @@
 #define LOG_INFO_FACILITY				134 //local0 info log 16*8+6
 #define LOG_DEBUG_FACILITY				135 //local0 debug log 16*8+7
 
-#define RUN_BACKGROUND		1 //enable the program running in background
+#define RUN_BACKGROUND		0 //enable the program running in background
 
 
-#define MYSQL_SERVER_IP			"172.18.238.206" //My aliyun ECS LAN
+//#define MYSQL_SERVER_IP			"172.18.238.206" //My aliyun ECS LAN
 //#define MYSQL_SERVER_IP			"39.108.12.199" //My aliyun ECS WAN
-//#define MYSQL_SERVER_IP			"192.168.108.70" //My company computer
+#define MYSQL_SERVER_IP			"192.168.108.70" //My company computer
 //#define MYSQL_SERVER_IP			"192.168.2.117"	//My home computer
 #define MYSQL_SERVER_PORT		3306
 #define MYSQL_USER_ID				"root"

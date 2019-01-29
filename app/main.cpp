@@ -13,6 +13,8 @@
 #include "../net/gateway/gateway_client.h"
 #include "../net/http/http_client.h"
 #include "../net/inc/socket_server.h"
+#include "../net/http/http_server.h"
+//#include "http_server.h"
 #include "../inc/log.h"
 #include "../inc/account_info.h"
 #include "../inc/gateway_info.h"
@@ -90,9 +92,12 @@ void* start_thread(void* arg)
    	std::thread gateway_thread(socket_server,GATEWAY_SERVER_PORT,"gateway server",gateway_client_thread);
    	sleep(2);
    //	std::thread cmd_thread(thread_cmd_input,nullptr);
+   std::thread http_server(http_server_start, nullptr);
+   
    	   	
    http_thread.join();
    gateway_thread.join();
+   http_server.join();
    //cmd_thread.join();
    return nullptr;
 }
